@@ -1,0 +1,26 @@
+mixin sVideo(data)
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Смотрите как это было:
+				
+			+e.wrap
+				iframe(src="//player.vimeo.com/video/522345087", loading="lazy" frameborder="0") 
+			.text-center
+				+e.text.bg-warning.h3.mb-4 +160% за 30 дней:
+				.h5.fw-400.mb-4 Это реальные деньги! На&nbsp;крипто-рынке нету демо-счетов.
+					br
+					| Кликните, чтобы увеличить:
+		+e.container--2
+			.container.text-center
+				+e.img-wrap(href="img/@2x/part1.jpg" data-fancybox) 
+					+pic("part1.jpg")
+				
+				.h3.mb-4 Вывод прибыли 
+					+e.SPAN.text.bg-warning каждые 2-3 дня, по 10% в среднем:
+		+e.container--3
+			.container.text-center
+				+e.img-wrap(href="img/@2x/part2.jpg" data-fancybox) 
+					+pic("part2.jpg")
+	// end sVideo

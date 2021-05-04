@@ -1,5 +1,35 @@
 mixin header()
-	// start header
-	+b.HEADER.header#header&attributes(attributes)
-		block
-	// end header
+
+	// start HEADER.header
+	+b.HEADER.header.block-with-lazy&attributes(attributes)
+		.container
+			+e.wrap
+				.h3 Автоматический робот, 
+				+e.title 
+					span с которым Вы будете делать более 100% прибыли ежемесячно 
+				.h3.mb-5 легально спекулируя криптовалютой!
+
+				.h5 Всего 1-2 часа в&nbsp;любое время дня или ночи&nbsp;&mdash; и&nbsp;каждые пару дней&nbsp;Вы выводите по&nbsp;+10% прибыли на&nbsp;свою банковскую карту
+				.h5.strong Зарегистрируйтесь прямо сейчас и получите доступ к&nbsp;пошаговому онлайн-курсу  и&nbsp;пробной версии робота
+				.row.gx-5.pt-4
+					.col-auto
+						+e.btn.btn.lb_target(type="button") Успейте получить бесплатно
+					.col
+						.time__block
+								
+							
+							.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5') 
+			+e.img-wrap
+				+pic('head-img.png') 
+		.container.pt-4
+			+e.footer 
+				.h1.text-primary Мы не преувеличиваем!
+				.h5.fw-400 Смотрите документальное подтверждение: видео отчет с&nbsp;реального торгового счета Евгения Стрижа, автора системы.
+				.h5.fw-400 Стартовый депозит: #[strong 1000 долларов]
+					br
+					| Время работы: #[strong 1 месяц]
+				+e.label 
+					.row 
+						.col.h5.fw-400 Выведено прибыли на карту: 
+						.col-auto.h4.strong.text-primary  +1600 долларов
+	// end HEADER.header

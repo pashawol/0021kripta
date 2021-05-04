@@ -1,0 +1,36 @@
+// start .sWhy
+.sWhy {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__col{
+			&::before{
+				content: url(../img/svg/shield.svg);
+				margin-bottom: rem(46);
+				display: block;
+			}
+		}
+		.h5{
+			font-weight: bold;
+			max-width: rem(220);
+		}
+		p{
+			max-width: rem(320);
+		}
+
+		&__item{
+
+		}
+
+	@include media-breakpoint-up(xl) {
+		.row{
+			--bs-gutter-x: 70px;
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWhy

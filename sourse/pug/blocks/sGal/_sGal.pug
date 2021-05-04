@@ -1,0 +1,23 @@
+mixin sGal(data)
+	// start sGal
+	+b.SECTION.sGal.section#sGal&attributes(attributes)
+		.container
+			+b.section-title
+				h2.text-primary Каждые 2-3 дня Евгений стабильно  выводит по&nbsp;+10% прибыли!
+				
+			.row
+				mixin item(i,t)
+					+e.col.col-6 
+						+e.item(href=`img/@2x/10-${i}.png` data-fancybox="gal")
+							+e.DIV.img-wrap
+								+pic(`10-${i}.png`)
+							+e.DIV.title= t
+				+item(`1`,`+10% за два дня`)
+				+item(`2`,`+10% за два дня`)
+				+item(`3`,`110% за 18 дней`)
+				+item(`4`,`160% за 30 дней`)
+				+item(`5`,`100% за 17 дней`)
+				+item(`6`,`+90% за 16 дней`)
+				+item(`7`,`+80% за 2 недели`)
+				+item(`8`,`+44% за 9 дней`) 
+	// end sGal

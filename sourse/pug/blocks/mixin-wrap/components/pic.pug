@@ -8,7 +8,7 @@ mixin pic(i, bg,  media='576px')
 		let exp = (expArr[1] || 'jpg')
 	mixin src(i, exp, path ,   source, bg)
 		-
-			const url= `img/@${path}/${expArr[0]}.${exp}`
+			const url= `img/@${path}/${expArr[0]}.${exp}` 
 			const data = (ifLazy ?  url  : null)
 
 		if source

@@ -1,0 +1,97 @@
+// start .sVideo
+.sVideo {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		h2{
+			@include rfs(42px);
+		}
+	&__wrap{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(928);
+		box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
+		filter: drop-shadow(0px 20px 25px rgba(218, 218, 218, 0.4));
+		border-radius: 10px;
+		overflow: hidden;
+		@include block(928, 520);
+		margin-bottom: 30px;
+		iframe{
+			width: 100% !important;
+			height: 100% !important;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__text{
+		display: inline-block;
+		padding: rem(8) rem(20);
+	}
+	picture{ 
+
+		box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
+		filter: drop-shadow(0px 20px 25px rgba(218, 218, 218, 0.4));
+		border-radius: 10px;
+		position: relative;
+		// overflow: hidden;
+		img{
+			border-radius: 10px;
+
+		}
+	}
+	&__img-wrap{
+		display: inline-block;
+		margin-bottom: rem(70);
+	}
+
+
+	&__container{
+		position: relative;
+		&--2{
+			&::before{
+				content: url(../img/svg/cont-before.svg);
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			picture{
+				position: relative;
+				z-index: 2;
+				&::before{
+					pointer-events: none;
+					content: url(../img/svg/cont-after.svg);
+					position: absolute;
+					z-index: -1;
+					right: -150px;
+					top: -150px;
+				}
+	
+			}
+		}
+		&--3{
+		 
+			picture{
+				position: relative;
+				z-index: 2;
+				&::before{
+					pointer-events: none;
+					content: url(../img/svg/cont-after2.svg);
+					position: absolute;
+					z-index: -1;
+					left: -250px;
+					bottom: -250px;
+				}
+	
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVideo

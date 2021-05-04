@@ -1,29 +1,340 @@
+.header {
+  @include bgs;
+  margin-bottom: 0;
+  z-index: 2;
+   &::after{
+      content: url(../img/@2x/webp/head-after.webp);
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+  &::before{
+    // z-index: -1;
+      content: url(../img/@2x/webp/head-before.webp);
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0%;
+    }
+  .container {
+    @include media-breakpoint-up(md) {
 
-	// start .header
-	.header {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+      padding-top: rem(74);
+      // padding-bottom: rem(132);
+    }
 
-} // end.header
+    padding-top: rem(104);
+
+    @include media-breakpoint-up(md) {
+
+      // padding-bottom: rem(132 / 2);
+    }
+
+    position: relative;
+  }
+
+  // background-color: $body-color;
+
+  &--reverse {
+    .header {
+      &__wrap {
+        @include media-breakpoint-up(lg) {
+
+          margin-left: auto;
+        }
+      }
+
+      &__img-wrap {
+
+        @include media-breakpoint-up(xxl) {
+
+          left: rem(-70);
+        }
+
+        @include media-breakpoint-only(xl) {
+          left: rem(0);
+        }
+
+
+        @include media-breakpoint-only(lg) {
+          left: rem(-100);
+        }
+
+
+      }
+
+    }
+  }
+
+  // &--1 {
+  //   background-image: url(../img/@2x/header-bg-1.jpg);
+  // }
+
+  // &--2 {
+  //   background-image: url(../img/@2x/header-bg-2.jpg);
+
+
+  // }
+
+  // &--3 {
+  //   background-image: url(../img/@2x/header-bg-3.jpg);
+  // }
+
+  // &--4 {
+  //   background-image: url(../img/@2x/header-bg-4.jpg);
+  // }
+
+  // &--5 {
+  //   background-image: url(../img/@2x/header-bg-5.jpg);
+  // }
+
+  // color: #ffffff;
+  // @extend .h6;
+  // font-weight: normal;
+
+  &__wrap {
+    // max-width: rem(680);
+    position: relative;
+    z-index: 3;
+  }
+
+  &__top-text {
+    @include media-breakpoint-up(md) {
+
+      margin-bottom: rem(60);
+    }
+
+    margin-bottom: rem(60 / 2);
+  }
+
+  &__lg-text {
+    // @extend .h1;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+  }
+  
+  &__title {
+    // @include rfs(42);
+    @include rfs(42px);
+    line-height: (54 /42);
+    // margin-bottom: rem(30);
+    max-width: rem(800);
+    span{
+      color: #fff;
+      background-color: $primary;
+      padding: 0 rem(5);
+    }
+  }
+  
+  .h5{
+    max-width: rem(450);
+    margin-bottom: rem(30);
+  }
+
+
+  &__btn {
+    @extend .btn-danger;
+    // width: rem(360);
+    margin-bottom: rem(48);
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+
+    margin-top: rem(40);
+  }
+
+
+
+  &__img-wrap {
+    img {
+      pointer-events: none;
+    }
+    
+    @include media-breakpoint-up(xl) {
+      
+      max-width: rem(700);
+      right: rem(-200);
+      top: 8%;
+    }
+    z-index: 2;
+    
+    
+    @include media-breakpoint-up(lg) {
+      
+      max-width: rem(500);
+      right: rem(-100);
+      top: 28%;
+    }
+    
+    @include media-breakpoint-up(md) {
+      
+      right: rem(-100);
+      max-width: rem(480);
+      position: absolute;
+      bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      left: auto;
+      margin-top: 0;
+    }
+
+    // margin-top: rem(50);
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: rem(380);
+    left: 2%;
+
+
+
+  }
+
+  &__name {
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba($color: #000000, $alpha: .5);
+    padding: rem(3) rem(15);
+    font-weight: 700;
+    line-height: 1.68;
+    @include a-cent(x);
+    font-size: 1rem;
+    bottom: rem(63);
+  }
+
+  .time__block {
+    // height: rem(75);
+  }
+ 
+
+  &__label{
+	background: rgba($color: $primary, $alpha: .1);
+	border-radius: 10px;
+  display: inline-block;
+  padding: rem(20) rem(30);
+  .row{
+    align-items: center;
+    > *{
+      margin-bottom: 0;
+    }
+  }
+
+}
+  // 
+  @include media-breakpoint-up(xl) {}
+
+  @include media-breakpoint-up(lg) {}
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(sm) {}
+
+  @include media-breakpoint-up(xs) {}
+
+  // 
+  @include media-breakpoint-between(md, xl) {}
+
+  // 
+  @include media-breakpoint-only(xs) {}
+
+  @include media-breakpoint-only(sm) {}
+
+  @include media-breakpoint-only(md) {}
+
+  @include media-breakpoint-only(lg) {}
+
+  @include media-breakpoint-only(xl) {}
+
+  // 
+  @include media-breakpoint-down(xl) {}
+
+  @include media-breakpoint-down(lg) {}
+
+  @include media-breakpoint-down(md) {}
+
+  @include media-breakpoint-down(sm) {}
+
+  @include media-breakpoint-down(xs) {}
+}
+
+
+.time__block{
+
+  
+  .idvd_timer {
+    font-size: rem(17);
+    font-weight: normal;
+    display: flex;
+    
+    @include media-breakpoint-up(md) {
+      
+      max-width: rem(370);
+      text-align: left;
+      margin-top: 0;
+    }
+    
+    // margin-top: rem(60);
+    
+  }
+  
+  .idvd_timer>div {
+    width: em(70);
+    
+    text-align: center;
+    font-weight: normal;
+    
+    &:first-child {
+      
+      margin-right: 1.5em;
+    }
+    
+    margin-right: .9em;
+    
+  }
+  
+  .idvd_timer .tmr_el_val {
+    
+    &:nth-child(2),
+    &:nth-child(3) {
+      .tmr_el_val {
+        position: relative;
+        
+        &::after {
+          content: ':';
+          right: 0;
+          @include a-cent(y);
+          color: #ffffff;
+          margin-left: rem(5);
+        }
+      }
+    }
+  }
+  
+  .idvd_timer .tmr_el_val {
+    border-radius: 0.25em;
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: bold;
+    font-size: 2.5em;
+    width: 100%;
+    height: em(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.3em 0;
+    font-weight: normal;
+    background-color: $primary;
+    font-family: $font-family-base;
+  }
+  
+  .idvd_timer .tmr_el_unit {
+    margin-top: 0;
+    font-weight: normal;
+    color: $primary;
+    font-family: $font-family-base;
+  }
+}

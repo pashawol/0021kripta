@@ -2,7 +2,6 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
 
 	.modal-content {
 		// max-width: 485px;
@@ -126,3 +125,9 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+.ld_icon{
+	img{
+		max-height: rem(480);
+	}
+}

@@ -1,0 +1,49 @@
+// start .sGal
+.sGal {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__item{
+			display: block;
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: rem(40);
+		}
+		&__title{
+			opacity: 0.8;
+			color: #000;
+		}
+		&__img-wrap{
+			background: #FFFFFF;
+			box-shadow: 0px 20px 25px rgba(218, 218, 218, 0.4);
+			border-radius: 20px;
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(sm) {
+
+				padding: rem(30) rem(30);
+			}
+			padding: rem(15);
+		}
+		picture{
+			max-width: rem(404);
+			margin-left: auto;
+			margin-right: auto;
+			@include block(404, 215);
+			overflow: hidden;
+		 img{
+			 position: absolute;
+			 left: 0;
+			 top: 0;
+			 width: 100%;
+			 height: auto;
+		 }
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sGal
