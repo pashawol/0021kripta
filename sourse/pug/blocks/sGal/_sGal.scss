@@ -12,6 +12,13 @@
 		&__title{
 			opacity: 0.8;
 			color: #000;
+			display: inline-block;
+			background-color: $warning;
+			padding: rem(10);
+			@include media-breakpoint-up(lg) {
+			font-size: 2rem;
+		}
+		font-size: 1.4rem;
 		}
 		&__img-wrap{
 			background: #FFFFFF;

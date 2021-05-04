@@ -9,6 +9,15 @@
 				margin-bottom: rem(46);
 				display: block;
 			}
+			@include media-breakpoint-down(sm) {
+				display: flex;
+				&::before{
+					// margin-right: 1rem;
+					transform: scale(.8);
+					position: relative;
+					top: rem(-20);
+				}
+			}
 		}
 		.h5{
 			font-weight: bold;

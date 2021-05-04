@@ -21,16 +21,20 @@
 	&__list {}
 
 	&__title {
-		@extend .h6;
+		@extend .h5;
 		font-weight: bold;
 		line-height: 1.3;
 		max-width: rem(240);
 		margin-bottom: rem(20);
 	}
-
+	
 	p {
+		@extend .h5;
+		// @extend .h6;
+		font-weight: normal;
 		opacity: 0.8;
 		line-height: 1.68;
+
 	}
 
 	&__item {
@@ -70,9 +74,10 @@
 
 
 		@include media-breakpoint-down(xl) {
-			margin-top: -100px;
+			margin-top: -50px;
 			margin-left: -200px;
 			margin-right: -200px;
+			margin-bottom: -50px;
 		}
 		@include media-breakpoint-up(xl) {
 
