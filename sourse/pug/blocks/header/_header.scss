@@ -100,6 +100,10 @@
     // max-width: rem(680);
     position: relative;
     z-index: 3;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__top-text {
@@ -141,12 +145,18 @@
     @extend .btn-danger;
     // width: rem(360);
     margin-bottom: rem(48);
-
+    padding-left: rem(5);
+    padding-right: rem(5);
+      // @include media-breakpoint-down(sm)
+    @include media-breakpoint-down(sm)  {
+      width: 100%;
+      font-size: 1rem;
+    }
     @include media-breakpoint-up(md) {
       margin-top: 0;
     }
 
-    margin-top: rem(40);
+    // margin-top: rem(40);
   }
 
 

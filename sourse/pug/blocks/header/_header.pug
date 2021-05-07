@@ -3,31 +3,32 @@ mixin header()
 	// start HEADER.header
 	+b.HEADER.header.block-with-lazy&attributes(attributes)
 		.container
-			+e.img-wrap
+
+			+e.wrap
+				.h3 Автоматический робот, 
+				+e.title 
+					span с которым Вы будете делать более 100% прибыли ежемесячно 
+				.h3.mb-sm-5.mb-3 легально спекулируя криптовалютой!
+
+				.h5 Всего 1-2 часа в&nbsp;любое время дня или ночи&nbsp;&mdash; и&nbsp;каждые пару дней&nbsp;Вы выводите по&nbsp;+10% прибыли на&nbsp;свою банковскую карту
+				.h5.strong.order-last Зарегистрируйтесь прямо сейчас и получите доступ к&nbsp;пошаговому онлайн-курсу  и&nbsp;пробной версии робота
+				div
+					.row.gx-5.pt-md-4
+						.col-sm-auto
+							+e.btn.btn.lb_target(type="button") Успейте получить бесплатно
+						.col
+							.time__block
+									
+								
+								.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5') 
+			
+			+e.img-wrap.order-last
 				picture
 					source(type='image/webp' srcset='img/@2x/webp/head-img.webp' media='(min-width:576px)')
 					source(type='image/webp' srcset='img/@1x/webp/head-img.webp')
 					source(type='image/png' srcset='img/@2x/head-img.png' media='(min-width:576px)')
 					source(type='image/png' srcset='img/@1x/head-img.png')
 					img(src='img/@2x/head-img.png' alt='' )
-
-			+e.wrap
-				.h3 Автоматический робот, 
-				+e.title 
-					span с которым Вы будете делать более 100% прибыли ежемесячно 
-				.h3.mb-5 легально спекулируя криптовалютой!
-
-				.h5 Всего 1-2 часа в&nbsp;любое время дня или ночи&nbsp;&mdash; и&nbsp;каждые пару дней&nbsp;Вы выводите по&nbsp;+10% прибыли на&nbsp;свою банковскую карту
-				.h5.strong Зарегистрируйтесь прямо сейчас и получите доступ к&nbsp;пошаговому онлайн-курсу  и&nbsp;пробной версии робота
-				.row.gx-5.pt-4
-					.col-auto
-						+e.btn.btn.lb_target(type="button") Успейте получить бесплатно
-					.col
-						.time__block
-								
-							
-							.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5') 
-		
 		.container.pt-4
 			+e.footer 
 				.h1.text-primary Мы не преувеличиваем!
